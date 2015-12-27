@@ -1,0 +1,96 @@
+body {
+  padding: 50px;
+  color: #404040;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  @include box-sizing(border-box);
+}
+.signup-title {
+  width: 440px;
+  line-height: 43px;
+  margin: 50px auto 20px;
+  font-size: 19px;
+  font-weight: 500;
+  color: white;
+  color: rgba(white, .95);
+  text-align: center;
+  background: #d7604b;
+  border-radius: 3px;
+  @include linear-gradient(top, #dc745e, #d45742);
+  @include box-shadow(inset 0 1px rgba(white, .1),
+                      inset 0 0 0 1px rgba(white, .05),
+                      0 0 1px 1px rgba(black, .1),
+                      0 1px 3px rgba(black, .3));
+}
+.signup {
+  margin: 0 auto;
+  width: 400px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 3px;
+  @include box-shadow(0 0 1px 1px rgba(black, .1),
+                      0 1px 3px rgba(black, .3));
+}
+div.input input{
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-top: 2px;
+  font-weight: 500;
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+
+  &:focus {
+    border-color: #1e9ce6;
+    outline: 0;
+  }
+}
+
+div.actions input{
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #494d59;
+  text-align: center;
+  background: #fcfcfc;
+  border: 1px solid;
+  border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+  border-radius: 2px;
+  cursor: pointer;
+  @include linear-gradient(top, #fefefe, #eee);
+  @include box-shadow(inset 0 -1px rgba(black, .03),
+                      0 1px rgba(black, .04));
+
+  &:active {
+    background: #eee;
+    border-color: #c3c3c3 #d1d1d1 #d8d8d8;
+    @include linear-gradient(top, #eee, #fcfcfc);
+    @include box-shadow(inset 0 1px rgba(black, .03));
+  }
+  &:focus { outline: 0; }
+}
+div.has-error p.block-help {
+    color: red;
+    display: block
+}
+div.has-error input{
+    border-color: red;
+    border-width: 1px 1px 1px 1px !important;
+    
+}
+:-moz-placeholder { color: #aaa; font-weight: 300; }
+::-moz-placeholder { color: #aaa; font-weight: 300; opacity: 1; }
+::-webkit-input-placeholder { color: #aaa; font-weight: 300; }
+:-ms-input-placeholder { color: #aaa; font-weight: 300; }
+
+::-moz-focus-inner { border: 0; padding: 0; }
