@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    h1.signup-title= title
+    div.signup
+        form(name="sign-up", method="post", action="/")
+            -if (typeof(user_name) !== 'undefined') {
+            div(class=!user_name.message ? "input" : "input has-error")
+                span.label Name *
+                input(type="text", name="user_name", value="#{user_name.value}")    
+                p.block-help #{user_name.message}
+            -}
+            -else {
+            div.input
+                span.label Name *
+                input(type="text", name="user_name")
+            -}
+            -if (typeof(user_email) !== 'undefined') {
+            div(class=!user_email.message ? "input" : "input has-error")
+                span.label Email *
+                input(type="text", name="user_email", value="#{user_email.value}")
+                p.block-help #{user_email.message}
+            -}
+            -else {
+            div.input
+                span.label Email *
+                input(type="text", name="user_email")
+            -}
+            div.actions
+                input(type="submit", value="Send")
